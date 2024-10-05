@@ -5,7 +5,6 @@
 
 import pandas as pd
 import seaborn as sns
-from pandas.util.version import Infinity
 from datetime import datetime
 
 
@@ -41,8 +40,8 @@ class DataMiner:
 
     def enumerate_column_range(self, col):
         tmp = set()
-        min_v = Infinity
-        max_v = -Infinity
+        min_v = float('inf')
+        max_v = float('-inf')
 
 
         if col in self.get_categorical_columns():
